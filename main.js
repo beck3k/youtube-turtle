@@ -1,7 +1,7 @@
 const YouTube = require('youtube-live-chat');
 var turtle = new TURTLE('canvas');
 
-const yt = new YouTube('UCQ23UDZHTpH2K71yvIYHENQ', 'AIzaSyB7peh8fzFNcd4GOGaOduvZ31zlmu_v8Lc');
+const yt = new YouTube();
 
 yt.on('ready', () => {
   console.log('ready!')
