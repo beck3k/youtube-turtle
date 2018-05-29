@@ -1,0 +1,15 @@
+{
+  "name": "youtube-poly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Beck",
+  "license": "ISC",
+  "dependencies": {
+    "turtle-canvas": "^0.1.0",
+    "youtube-live-chat": "^1.0.1"
+  }
+}
