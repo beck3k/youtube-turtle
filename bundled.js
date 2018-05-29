@@ -4,15 +4,27 @@ var turtle = new TURTLE('canvas');
 
 const yt = new YouTube('UCQ23UDZHTpH2K71yvIYHENQ', 'AIzaSyB7peh8fzFNcd4GOGaOduvZ31zlmu_v8Lc');
 
+function doTurtle(msg) {
+  eval("turtle." + msg);
+}
+
 yt.on('ready', () => {
-  console.log('ready!')
-  turtle.stroke();
-  turtle.forward(10);
+  console.log('ready!');
+  doTurtle('moveTo(10,244)')
+  doTurtle('forward(100)');
+  doTurtle('stroke()');
+  eval('console.log("test")');
   yt.listen(1000)
 })
 
 yt.on('chat', data => {
-  console.log(data.snippet.displayMessage)
+  console.log(data.snippet.displayMessage);
+  var msg = data.snippet.displayMessage;
+  if(msg.charAt(0) == "!"){
+    var cmd = msg.substr(1,msg.length);
+    console.log("Command>" + cmd);
+    doTurtle(cmd);
+  }
 })
 
 yt.on('error', error => {
